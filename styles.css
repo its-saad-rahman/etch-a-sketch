@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Poppins:wght@400;500;900&display=swap');
 * {
+  font-family: 'Poppins', sans-serif;
 }
-
 .container {
   width: min(95%, 1440px);
+  margin-inline: auto;
 }
 h1 {
   font-family: 'Bonheur Royale', cursive;
@@ -15,6 +16,13 @@ h1 {
 .sketch-board {
   display: flex;
   gap: 3em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -22,4 +30,78 @@ h1 {
   height: 600px;
   width: 800px;
   border: 10px solid rgba(255, 0, 0, 0.7);
+}
+
+/* grid layout */
+.range {
+  height: 80px;
+  width: 380px;
+  padding: 0 65px 0 45px;
+  border-radius: 10px;
+  background: hsl(217, 45%, 17%);
+}
+
+.range .slider-value {
+  position: relative;
+  width: 100%;
+}
+.range .slider-value span {
+  position: absolute;
+  height: 20px;
+  width: 60px;
+  color: white;
+  font-weight: 500;
+  top: 5px;
+  z-index: 2;
+
+  font-size: 13px;
+  transform: scale(0);
+  transition: transform 0.05s ease-in-out;
+}
+.range .slider-value span.show {
+  transform: scale(1);
+}
+.range .slider-value span:after {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 60px;
+  left: 50%;
+  z-index: -1;
+}
+.range .field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.range .field .value {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+.range .field .value.left {
+  left: -22px;
+}
+.range .field .value.right {
+  right: -43px;
+}
+.range .field input {
+  -webkit-appearance: none;
+  height: 3px;
+  width: 100%;
+  background: #ddd;
+  border-radius: 5px;
+  border: none;
+}
+
+.range .field input::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
 }
