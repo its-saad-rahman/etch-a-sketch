@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
+* {
+}
+
+.container {
+  width: min(95%, 1440px);
+}
+h1 {
+  font-family: 'Bonheur Royale', cursive;
+  font-size: 4em;
+  font-weight: 900;
+  text-align: center;
+  color: goldenrod;
+}
+.sketch-board {
+  display: flex;
+  gap: 3em;
+  justify-content: center;
+  align-items: center;
+}
+.drawing-area {
+  height: 600px;
+  width: 800px;
+  border: 10px solid rgba(255, 0, 0, 0.7);
+}
