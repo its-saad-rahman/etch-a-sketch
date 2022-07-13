@@ -12,10 +12,31 @@
     <div class="container">
       <h1>Etch-A-Sketch</h1>
       <div class="sketch-board">
-        <div class="menu">
+        <div class="controls">
+          <label for="grid">Grid Layout:</label>
+          <div class="range">
+            <div class="slider-value">
+              <span>16 x 16</span>
+            </div>
+            <div class="field">
+              <div class="value left">1</div>
+              <input
+                id="grid"
+                type="range"
+                name="grid"
+                min="1"
+                max="100"
+                value="16"
+                steps="1"
+                data-name="grid"
+              />
+              <div class="value right">100</div>
+            </div>
+          </div>
+
           <button>clear</button>
         </div>
-        <div class="drawing-area"></div>
+        <div id="draw" class="drawing-area"></div>
       </div>
     </div>
   </body>
