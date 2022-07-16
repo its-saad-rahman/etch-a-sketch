@@ -13,6 +13,18 @@
       <h1>Etch-A-Sketch</h1>
       <div class="sketch-board">
         <div class="controls">
+          <div class="buttons">
+            <button class="random-color" data-color="random">
+              Random Color
+            </button>
+
+            <div data-color="color-picker">
+              <label for="color-picker">Create your own color:</label>
+              <input type="color" id="color-picker" />
+            </div>
+            <button class="clear">clear</button>
+          </div>
+
           <label for="grid">Grid Layout:</label>
           <div class="range">
             <div class="slider-value">
@@ -25,16 +37,14 @@
                 type="range"
                 name="grid"
                 min="1"
-                max="100"
+                max="60"
                 value="16"
                 steps="1"
                 data-name="grid"
               />
-              <div class="value right">100</div>
+              <div class="value right">60</div>
             </div>
           </div>
-
-          <button>clear</button>
         </div>
         <div id="draw" class="drawing-area"></div>
       </div>
